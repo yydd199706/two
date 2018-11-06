@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="Whole">
+			<div class="Whole_top">
+				<div class="WholeTop_left"><img src="img/img6.png" alt="..." /></div>
+				<div class="WholeTop_input"><img src="img/img11.png" alt="..." /><input type="text" id="frame" placeholder="搜索音乐" /></div>
+				<div class="WholeTop_user"><img src="img/img9.jpg" alt="..." /><span>Mute_s</span></div>
+				<div class="WholeTop_close">
+					<div>一</div>
+					<div></div>
+					<div><img src="img/img8.png" alt="..." /></div>
+				</div>
+			</div>
+			<div class="music">
+				<div class="music_details">
+					<div>序号</div>
+					<div>音乐标题</div>
+					<div>歌手</div>
+					<div>时长</div>
+				</div>
+				<div class="singer">
+					<div>
+						<div>01</div>
+						<div>乌云中</div>
+						<div>艾热</div>
+						<div>03:42</div>
+					</div>
+					<div>
+						<div>02</div>
+						<div>我们俩</div>
+						<div>郭顶</div>
+						<div>03:13</div>
+					</div>
+					<div>
+						<div>03</div>
+						<div>我很快乐</div>
+						<div>刘惜君</div>
+						<div>03:33</div>
+					</div>
+					<div>
+						<div>04</div>
+						<div>请先说你好</div>
+						<div>Tim</div>
+						<div>04:50</div>
+					</div>
+					<div>
+						<div>05</div>
+						<div>我喜欢上你时的内心活动</div>
+						<div>陈绮贞</div>
+						<div>03:45</div>
+					</div>
+					<div>
+						<div>06</div>
+						<div>走在冷风中</div>
+						<div>二珂</div>
+						<div>03:30</div>
+					</div>
+					<div>
+						<div>07</div>
+						<div>老街</div>
+						<div>李荣浩</div>
+						<div>05:18</div>
+					</div>
+					<div>
+						<div>08</div>
+						<div>再见，再见</div>
+						<div>逃跑计划</div>
+						<div>05:29</div>
+					</div>
+					<div>
+						<div>09</div>
+						<div>Baby,Baby</div>
+						<div>bigbang</div>
+						<div>03:54</div>
+					</div>
+					<div>
+						<div>10</div>
+						<div>Baby,Baby</div>
+						<div>bigbang</div>
+						<div>03:54</div>
+					</div>
+					<div>
+						<div>11</div>
+						<div>Bigbang</div>
+						<div>bigbang</div>
+						<div>03:25</div>
+					</div>
+					<div>
+						<div>12</div>
+						<div>Bringing You Love</div>
+						<div>bigbang</div>
+						<div>03:33</div>
+					</div>
+					<div>
+						<div>13</div>
+						<div>Day by Day</div>
+						<div>bigbang</div>
+						<div>03:33</div>
+					</div>
+					<div>
+						<div>14</div>
+						<div>Emotion</div>
+						<div>bigbang</div>
+						<div>03:33</div>
+					</div>
+					<div>
+						<div>15</div>
+						<div>LaLaLa La</div>
+						<div>bigbang</div>
+						<div>03:33</div>
+					</div>
+					<div>
+						<div>16</div>
+						<div>Number 1</div>
+						<div>bigbang</div>
+						<div>03:33</div>
+					</div>
+				</div>
+			</div>
+			<div class="music-bot">
+				<div class="musicBot-left">
+					<div class="musicBot_up"><img src="img/img4.png" alt="..." /></div>
+					<div class="music_img">
+						<img src="img/img2.png" alt="..." class="playAudio" />
+						<img src="img/img3.png" alt="..." class="hide"/>
+					</div>
+					<div class="musicBot_down">
+						<img src="img/img1.png" alt="..." />
+					</div>
+				</div>
+				<div class="musicBot-center">
+					<div>00.00</div>
+					<div><input type="range" id="ran" /></div>
+					<div>00.00</div>
+				</div>
+				<div class="musicBot-right">
+					<div class="OpenSound">
+						<img src="img/img5.png" alt="..." />
+					</div>
+					<div><input type="range" min="1" max="100" id="yinliang" /></div>
+					<div>词</div>
+				</div>
+			</div>
+		</div>
+		<audio src="" controls="controls" preload id="player" Volume="0" class="hide">
+			<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+			<script type="text/javascript">
+				$(function() {
+					var player = document.getElementById("player");
+					var playstate = false; //关闭状态
+					var arrd = ["audio/mp1.mp3", "audio/mp2.mp3", "audio/mp3.mp3", "audio/mp4.mp3", "audio/mp5.mp3", "audio/mp6.mp3", "audio/mp7.mp3", "audio/mp8.mp3", "audio/mp9.mp3", "audio/mp10.mp3", "audio/mp11.mp3", "audio/mp12.mp3", "audio/mp13.mp3", "audio/mp14.mp3", "audio/mp15.mp3", "audio/mp16.mp3"];
+
+					$('.singer>div').dblclick(function() {
+						var ind = $(this).index();
+						$("#player").attr("src", arrd[ind]);
+						console.log('下标为', ind);
+						player.play();
+						playstate = true;
+						$('.music_img').children('img').eq(1).show().siblings().hide();
+
+					});
+					$('.music_img').click(function() {
+						if(playstate == false) {
+							player.play();
+							$(this).children('img').eq(1).show().siblings().hide();
+							playstate = true;
+						} else {
+							player.pause();
+							$(this).children('img').eq(0).show().siblings().hide();
+							playstate = false;
+						}
+					});
+					//					上一首歌
+					$('.musicBot_up').click(function() {
+						//					1.获取当前播放路径
+						//					2.循环数组,对比相同路径,找到索引
+						//					3.找到索引后  如果当前索引是0,就没有上手个,弹框提示播放完毕
+						//					4.如果索引不是0,索引1,然后使用心得索引,取数组索引相对的路径赋值src
+						var src1 = $('#player').attr('src');
+						console.log('lll', src1);
+						for(var i = 0; i < arrd.length; i++) {
+							if(arrd[i] == src1) {
+								if(i == 0) {
+									alert('上面没歌了');
+									return false;
+								} else {
+									var inde = i - 1;
+									var src2 = arrd[inde];
+									$('#player').attr('src', src2);
+									player.play();
+									playstate = true;
+								}
+							}
+						}
+					});
+					//					下一首歌
+					$('.musicBot_down').click(function() {
+						var src1 = $('#player').attr('src');
+						console.log('lll', src1);
+						for(var i = 0; i < arrd.length; i++) {
+							if(arrd[i] == src1) {
+								if(i == arrd.length - 1) {
+									alert('下面没歌了');
+									return false;
+								} else {
+									var inde = i + 1;
+									var src2 = arrd[inde];
+									$('#player').attr('src', src2);
+									player.play();
+									playstate = true;
+								}
+							}
+						}
+
+						//					1.获取当前播放路径
+						//					2.循环数组,对比相同路径,找到索引
+						//					3.找到索引后  如果当前是最后一个  那就没有下首歌  提示播放完毕,就没有上手个,弹框提示播放完毕
+						//					4.如果索引不是最后一个,索引+1,然后使用心得索引,取数组索引相对的路径赋值src		
+
+					});
+					$("#yinliang").change(function() {
+						var val = $(this).val();
+						var Data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+						var DatasVal = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
+						if(val < 10) {
+							document.getElementById("player").volume = 0.1;
+						}
+						if(val > 90) {
+							document.getElementById("player").volume = 1;
+						}
+						for(var k = 0; k < Data.length; k++) {
+							if(val >= Data[k] && val <= Data[k + 1] && val <= 90) {
+								document.getElementById("player").volume = DatasVal[k];
+							}
+						}
+						//		获取当前值和max长度100的比例,设置css样式
+						var LeftCss = val / 100;
+						var Cssleft = LeftCss * 100 + '%';
+						var TopSize = "100%";
+						var GroundSize = Cssleft + " " + TopSize;
+						var GroundColor = "-webkit-linear-gradient(#E83C3C, #E83C3C) no-repeat, #ddd";
+						$("#yinliang").css("background", GroundColor);
+						$("#yinliang").css("background-size", GroundSize);
+					});
+					//	js设置静音
+					$(".OpenSound").click(function() {
+						$("#yinliang").css("background", "#ddd");
+						$("#yinliang").css("background-size", 0);
+						document.getElementById("player").volume = 0;
+					});
+				});
+			</script>
+	</body>
+
+</html>
+<!--<script>
+			
+		</script>-->
