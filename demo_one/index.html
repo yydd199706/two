@@ -151,7 +151,7 @@
 			</div>
 		</div>
 		<audio src="" controls="controls" preload id="player" Volume="0" class="hide">
-			<script src="js/jquery-2.1.0.js"></script>
+			<script src="js/jquery-3.3.1.js"></script>
 			<script type="text/javascript">
 				$(function() {
 					var player = document.getElementById("player");
@@ -161,11 +161,9 @@
 					$('.singer>div').dblclick(function() {
 						var ind = $(this).index();
 						$("#player").attr("src", arrd[ind]);
-						console.log('下标为', ind);
 						player.play();
 						playstate = true;
 						$('.music_img').children('img').eq(1).show().siblings().hide();
-
 					});
 					$('.music_img').click(function() {
 						if(playstate == false) {
@@ -180,10 +178,10 @@
 					});
 					//					上一首歌
 					$('.musicBot_up').click(function() {
-						//					1.获取当前播放路径
-						//					2.循环数组,对比相同路径,找到索引
-						//					3.找到索引后  如果当前索引是0,就没有上手个,弹框提示播放完毕
-						//					4.如果索引不是0,索引1,然后使用心得索引,取数组索引相对的路径赋值src
+						//1.获取当前播放路径
+						//2.循环数组,对比相同路径,找到索引
+						//3.找到索引后  如果当前索引是0,就没有上手个,弹框提示播放完毕
+						//4.如果索引不是0,索引1,然后使用心得索引,取数组索引相对的路径赋值src
 						var src1 = $('#player').attr('src');
 						console.log('lll', src1);
 						for(var i = 0; i < arrd.length; i++) {
@@ -219,12 +217,10 @@
 								}
 							}
 						}
-
-						//					1.获取当前播放路径
-						//					2.循环数组,对比相同路径,找到索引
-						//					3.找到索引后  如果当前是最后一个  那就没有下首歌  提示播放完毕,就没有上手个,弹框提示播放完毕
-						//					4.如果索引不是最后一个,索引+1,然后使用心得索引,取数组索引相对的路径赋值src		
-
+						//1.获取当前播放路径
+						//2.循环数组,对比相同路径,找到索引
+						//3.找到索引后  如果当前是最后一个  那就没有下首歌  提示播放完毕,就没有上手个,弹框提示播放完毕
+						//4.如果索引不是最后一个,索引+1,然后使用心得索引,取数组索引相对的路径赋值src		
 					});
 					$("#yinliang").change(function() {
 						var val = $(this).val();
@@ -241,7 +237,7 @@
 								document.getElementById("player").volume = DatasVal[k];
 							}
 						}
-						//		获取当前值和max长度100的比例,设置css样式
+						//获取当前值和max长度100的比例,设置css样式
 						var LeftCss = val / 100;
 						var Cssleft = LeftCss * 100 + '%';
 						var TopSize = "100%";
@@ -250,7 +246,7 @@
 						$("#yinliang").css("background", GroundColor);
 						$("#yinliang").css("background-size", GroundSize);
 					});
-					//	js设置静音
+					//js设置静音
 					$(".OpenSound").click(function() {
 						$("#yinliang").css("background", "#ddd");
 						$("#yinliang").css("background-size", 0);
