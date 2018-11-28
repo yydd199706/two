@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="flexible" content="initial-dpr=2" />
+		<title>品牌简介</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="layui-v2.4.5/layui/css/layui.css" />
+		<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="top">
+			<div class="Catalog">
+				<img src="img/xian.png" alt="..." />
+			</div>
+			<div class="logo">
+				<div><img src="img/img83.png" alt="..." /></div>
+				<div>博越智能家居</div>
+			</div>
+			<div class="phone">
+				<a href="tel:0147-88469258"><img src="img/phone.png" alt="..." /></a>
+			</div>
+		</div>
+		<!--banner图-->
+		<div class="banner">
+			<img src="img/banner1.png" />
+		</div>
+		<!--博越科技-->
+		<div class="About_title">
+			<div>关于我们</div>
+			<div></div>
+			<div>about</div>
+		</div>
+		<div class="About_text">
+			<div class="backimg"><img src="img/img2.png" alt="..." /></div>
+			<div class="introduce introduce1">
+				<div class="introduce_title">
+					<div><img src="img/g2.png" alt="..." /></div>
+					<div>陕西博越智能科技有限公司</div>
+				</div>
+				<div class="introduce_text">陕西博越智能科技有限公司成立于2018年8月， 位于陕西省西安市，是一家专业从事全屋精装以及智 能化家居，消防工程的设计与施工的公司。主要有全 屋智能化系统，现代高科技类产品一千余中。具有高 级管理团队，专业技术团队以及高素质的施工团队。
+				</div>
+			</div>
+		</div>
+		<div class="aboutBoyue-three">
+			<a href="javascript:;">
+				<div class="aboutBoyue-top">
+					<img src="img/g3.png" alt="img" />
+					<img src="img/g4.png" alt="img" class="hide" />
+				</div>
+				<div class="aboutBoyue-bot">一件咨询</div>
+			</a>
+			<a href="javascript:;">
+				<div class="aboutBoyue-top">
+					<img src="img/g7.png" alt="img" />
+					<img src="img/g6.png" alt="img" class="hide" />
+				</div>
+				<div class="aboutBoyue-bot">联系我们</div>
+			</a>
+			<a href="javascript:;">
+				<div class="aboutBoyue-top">
+					<img src="img/g5.png" alt="img" />
+					<img src="img/g1.png" alt="img" class="hide" />
+				</div>
+				<div class="aboutBoyue-bot">加入我们</div>
+			</a>
+		</div>
+		<!--轮播-->
+		<div class="boddy">
+			<div id="wrapper">
+				<ul>
+					<li><img src="img/img51.png" alt="..." /></li>
+					<li><img src="img/img51.png" alt="..." /></li>
+					<li><img src="img/img51.png" alt="..." /></li>
+					<li><img src="img/img51.png" alt="..." /></li>
+					<li><img src="img/img51.png" alt="..." /></li>
+					<li><img src="img/img51.png" alt="..." /></li>
+					<li><img src="img/img51.png" alt="..." /></li>
+				</ul>
+			</div>
+			<div id="bth1"><img src="img/img/img22.png" alt="..." /></div>
+			<div id="bth2"><img src="img/img/img23.png" alt="..." /></div>
+		</div>
+		<!--底部-->
+		<div class="footer">
+			<div class="gray">全国统一联系热线</div>
+			<div>029-81707767</div>
+			<div class="gray">我们的地址</div>
+			<div>陕西省西安市浐灞生态区欧亚大道西段欧亚国际A座1227</div>
+			<div class="Scavenging">
+				<div class="Scavenging_left">
+					<div><img src="img/5.png" alt="..." /></div>
+					<div>官方微信</div>
+				</div>
+				<div class="Scavenging_left">
+					<div><img src="img/5.png" alt="..." /></div>
+					<div>官方微信</div>
+				</div>
+			</div>
+			<div class="gray last">版权所有 2018 陕西博越智能科技有限公司</div>
+			<div class="gray last">陕ICP备12007852号-2&nbsp;&nbsp;&nbsp;技术支持：泰雁科技</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			//					轮播1 
+			var timer1 = null; //这里只是给个定义，不让变量是undefind就行，也可以直接赋值
+			var speed2 = 3; //速度
+			var od1 = document.getElementById("wrapper"); //最外部的div
+			var au1 = od1.getElementsByTagName('ul')[0];    
+			var ali1 = au1.getElementsByTagName('li');    
+			au1.innerHTML = au1.innerHTML + au1.innerHTML; //这里是把ul的内容*2
+			au1.style.width = ali1[0].offsetWidth * ali1.length + 'px'; //ul的宽度时多有的li的宽度之和
+			timer1 = setInterval(move1, 30); //定时器重复执行move这个函数，每0.3秒执行一次
+			function move1() { //这个函数的作用是移动
+				// offsetLeft是指当前元素距离左侧的距离
+				//       offsetWidth是指对象整体的实际宽度，包滚动条等边线，会随对象显示大小的变化而改变
+				if(au1.offsetLeft < -au1.offsetWidth / 2) {
+					//     如果ul距离他的父元素wrapper的左侧距离小于ul这个元素整体宽度的一半,就让它的左边距归0
+					au1.style.left = '0';     
+				}     
+				if(au1.offsetLeft > 0) {
+					//         如果左边距大于0,那么左边距就等于当前ul的总体宽度除以2
+					au1.style.left = -au1.offsetWidth / 2 + 'px';     
+				}     
+				au1.style.left = au1.offsetLeft + speed2 + 'px';
+				//        ul的左边定位left等于ul的左边距+4,加这个4的原因是控制速度，不信你可以更改一下，数值越大速度越快
+			}    
+			od1.onmouseover = function() { //鼠标进入的时候，停止定时器，让它停下来
+				clearInterval(timer1);    
+			}    
+			od1.onmouseout = function() { //鼠标离开的时候，继续执行定时器，让它继续动
+				timer1 = setInterval(move1, 30);    
+			}      
+			document.getElementById("bth1").onclick = function() {     //速度为-4的时候，就是让它向左边，因为我们是在更改它的定位left,所以负值是左边
+				speed2 = -3;    
+			}    
+			document.getElementById("bth2").onclick = function() {     //速度为4的时候，就是让它向右边，因为我们是在更改它的定位left,所以负值是右边
+				speed2 = 3;    
+			} 
+			//				鼠标滑过一键联系
+			$(function() {
+				$(".aboutBoyue-three>a").mouseenter(function() {
+					$(this).children(".aboutBoyue-top").children("img").eq(1).removeClass("hide").siblings().addClass("hide");
+					$(this).children('.aboutBoyue-bot').css({
+						'color': '#014a96'
+					})
+				});
+				$(".aboutBoyue-three>a").mouseleave(function() {
+					$(this).children(".aboutBoyue-top").children("img").eq(0).removeClass("hide").siblings().addClass("hide");
+					$(this).children('.aboutBoyue-bot').css({
+						'color': '#000'
+					});
+
+				});
+			})
+		</script>
+	</body>
+
+</html>

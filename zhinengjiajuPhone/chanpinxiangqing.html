@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="flexible" content="initial-dpr=2" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="layui-v2.4.5/layui/css/layui.css" />
+		<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="top">
+			<div class="Catalog">
+				<img src="img/xian.png" alt="..." />
+			</div>
+			<div class="logo">
+				<div><img src="img/img83.png" alt="..." /></div>
+				<div>博越智能家居</div>
+			</div>
+			<div class="phone">
+				<a href="tel:0147-88469258"><img src="img/phone.png" alt="..." /></a>
+			</div>
+		</div>
+		<!--banner图-->
+		<div class="banner">
+			<img src="img/banner1.png" />
+		</div>
+		<!--产品详情-->
+		<div class="IntelligentLock">
+			<div class="IntelligentLock_top">
+				<span>当前位置&nbsp;:</span>
+				<span><a href="javascript:;">首页</a></span>
+				<span>></span>
+				<span><a href="javascript:;">产品中心</a></span>
+				<span>></span>
+				<span>智能锁</span>
+			</div>
+			<div class="IntelligentLock_title">家用防盗门锁</div>
+			<div class="IntelligentLock_img">
+				<div class="IntelligentLockImg_top">
+					<div class="IntelligentLockImg_top_left">
+						<div><img src="img/img76.png" alt="..." /></div>
+						<div class="hide"><img src="img/img78.png" alt="..." /></div>
+						<div class="hide"><img src="img/img71.png" alt="..." /></div>
+						<div class="hide"><img src="img/img72.png" alt="..." /></div>
+						<div class="hide"><img src="img/img67.png" alt="..." /></div>
+						<div class="hide"><img src="img/img68.png" alt="..." /></div>
+					</div>
+					<div class="wapperBig">
+						<div id="main">
+							<div id="warpper">
+								<div id="inner">
+									<div><img src="img/img76.png" alt="..." /></div>
+									<div><img src="img/img78.png" alt="..." /></div>
+									<div><img src="img/img71.png" alt="..." /></div>
+									<div><img src="img/img72.png" alt="..." /></div>
+									<div><img src="img/img67.png" alt="..." /></div>
+									<div><img src="img/img68.png" alt="..." /></div>
+								</div>
+							</div>
+						</div>
+						<div id="optrbtn">
+							<span class="btnleft"><img src="img/zuo.png" alt="..."/></span>
+							<span class="btnright"><img src="img/you.png" alt="..."/></span>
+						</div>
+					</div>
+				</div>
+				<div class="IntelligentLockImg_top_center">
+					<p>所属分类：智能锁</p>
+					<p>产品名称：家用防盗门锁</p>
+					<p>发布日期：2018-11-07</p>
+					<a href="javascript:;">我要询价</a>
+				</div>
+			</div>
+			<div class="Detailed">详细介绍</div>
+			<div class="Detailed_text">
+				<p>名称：家用防盗门锁</p>
+				<p>品牌：宾利</p>
+				<p>型号：B1</p>
+				<p>认假率：小于等于0.0002%</p>
+				<p>产品特点</p>
+				<p>采集识别真皮活体指纹，防止假指纹智能双核系统，双驱动机电转换功能专利多点防护自碰锁芯，防锯锁舌滑盖自动上电，防尘防潮设计指纺，密码，钥匙三种开启，钥匙可以选装虚位密码功能, 可防止密码被偷窥通配性强，可适合多种品牌的防盗门。 </p>
+			</div>
+			<div class="fingerprint"><img src="img/img82.png" alt="..." /></div>
+		</div>
+		<!--底部-->
+		<div class="footer">
+			<div class="gray">全国统一联系热线</div>
+			<div>029-81707767</div>
+			<div class="gray">我们的地址</div>
+			<div>陕西省西安市浐灞生态区欧亚大道西段欧亚国际A座1227</div>
+			<div class="Scavenging">
+				<div class="Scavenging_left">
+					<div><img src="img/5.png" alt="..." /></div>
+					<div>官方微信</div>
+				</div>
+				<div class="Scavenging_left">
+					<div><img src="img/5.png" alt="..." /></div>
+					<div>官方微信</div>
+				</div>
+			</div>
+			<div class="gray last">版权所有 2018 陕西博越智能科技有限公司</div>
+			<div class="gray last">陕ICP备12007852号-2&nbsp;&nbsp;&nbsp;技术支持：泰雁科技</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var curNum = 0;
+				var count = $("#inner").children('div').length;
+				//左滑动
+				$(".btnleft").click(function() {
+					//如果到了最后一个元素 停止
+					if((count - curNum) <= 3) {
+						return false;
+					}
+					curNum += 1;
+					$("#inner").animate({
+						left: '-=162'
+					}, 500, function() {});
+				});
+				//右滑动
+				$(".btnright").click(function() {
+					//如果到了第一个元素 停止
+					if(curNum <= 0) {
+						return false;
+					}
+					curNum -= 1;
+
+					$("#inner").animate({
+						left: '+=162'
+					}, 500, function() {
+						//curNum-=1;    //写在这里同样问题
+
+					});
+				});
+
+				$('#inner>div').click(function() {
+					var ind = $(this).index();
+					console.log('下标', ind);
+					$('.IntelligentLockImg_top_left').children('div').eq(ind).show().siblings().hide();
+				});
+			})
+		</script>
+	</body>
+
+</html>
