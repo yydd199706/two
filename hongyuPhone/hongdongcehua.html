@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="flexible" content="initial-dpr=2" />
+		<title>活动策划</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="top_big">
+			<div class="top">
+				<div class="top_left"><img src="img/xian.png" alt="..." /></div>
+				<div class="logo">
+					<img src="img/img1.png" alt="..." />
+				</div>
+				<div class="phone">
+					<a href="tel:029-82095999"><img src="img/phone.png" alt="..." /></a>
+				</div>
+			</div>
+		</div>
+		<!--banner-->
+		<div class="banner"><img src="img/img2.png" alt="..." /></div>
+		<!--活动策划案例-->
+		<div class="case">
+			<div class="content-five">
+				<ul class="contentbox-five ul_five">
+					<li class="con-five five">
+						<img class="conimg con" src="img/img11.png" alt="..." />
+						<div class="txt-five">
+							<h3>FAD会议策划</h3>
+						</div>
+					</li>
+					<li class="con-five five">
+						<img class="conimg con" src="img/img12.png" alt="..." />
+						<div class="txt-five">
+							<h3>大唐芙蓉园冰激凌节</h3>
+						</div>
+					</li>
+					<li class="con-five five">
+						<img class="conimg con" src="img/img13.png" alt="..." />
+						<div class="txt-five">
+							<h3>地产活动</h3>
+						</div>
+					</li>
+					<li class="con-five five">
+						<img class="conimg con" src="img/img14.png" alt="..." />
+						<div class="txt-five">
+							<h3>封顶仪式</h3>
+						</div>
+					</li>
+					<li class="con-five five">
+						<img class="conimg con" src="img/img15.png" alt="..." />
+						<div class="txt-five">
+							<h3>高信隆西安分公司开业</h3>
+						</div>
+					</li>
+					<li class="con-five five">
+						<img class="conimg con" src="img/img17.png" alt="..." />
+						<div class="txt-five">
+							<h3>婚礼</h3>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="footer" style="background: url(img/img43.png)no-repeat center center;background-size: cover;">
+			<div>专注于创意活动策划执行[新闻发布会策划</div>
+			<div>｜年会策划｜周年庆典策划｜会议策划］</div>
+			<div>凭借自己专业的素养，前瞻的活动创意</div>
+			<div>打造可持续发展的一站式活动策划执行服务</div>
+			<div>为客户提供全方位活动策划传播解决方案。</div>
+			<div>| 首页 | 庆典活动 | 文艺演出 | </div>
+			<div>大型活动策划 | 新闻中心 | 联系我们 |</div>
+			<div>Copyright © 2018 <span>陕西红雨文化传播有限公司</span> 版权所有 陕ICP备16015959号-1 技术支持：泰雁科技</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				/*鼠标悬停图片放大*/
+				$(".con-five").hover(function() {
+					$(this).find(".conimg").stop().animate({
+						"width": 200,
+						"height": 150
+					});
+				}, function() {
+					$(this).find(".conimg").stop().animate({
+						"width": 185,
+						"height": 132
+					});
+				});
+			})
+		</script>
+	</body>
+
+</html>

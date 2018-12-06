@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="flexible" content="initial-dpr=2" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="nav">
+			<div class="guanbi"><img src="img/close.png" alt="..." /></div>
+			<div class="Navigationbar">
+				<ul>
+					<li>
+						<a href="javascript:;">首页 </a>
+					</li>
+					<li>
+						<a href="javascript:;">庆典活动</a>
+						<ul class="Arrow hide">
+							<li>
+								<a href="javascript:;">开业庆典</a>
+							</li>
+							<li>
+								<a href="javascript:;">周年庆</a>
+							</li>
+							<li>
+								<a href="javascript:;">开工奠基</a>
+							</li>
+							<li>
+								<a href="javascript:;">乔迁庆典</a>
+							</li>
+						</ul>
+						<span class="down">
+							<img src="img/down.png" alt="..."/>
+							<img src="img/up.png" alt="..." class="hide"/>
+						</span>
+					</li>
+					<li>
+						<a href="javascript:;">文艺演出</a>
+					</li>
+					<li>
+						<a href="javascript:;">大型活动策划</a>
+					</li>
+					<li>
+						<a href="javascript:;">新闻中心</a>
+					</li>
+					<li>
+						<a href="javascript:;">联系我们</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var toggle = true;
+				$(".down").click(function() {
+					if(toggle) {
+						$(this).children("img").attr("src", "img/up.png");
+						toggle = false;
+						$(this).siblings('ul').show();
+					} else {
+						$(this).children("img").attr("src", "img/down.png");
+						toggle = true;
+						$(this).siblings('ul').hide();
+					}
+				});
+				$('.guanbi').click(function(){
+//					$('.nav').hide();
+				})
+			});
+		</script>
+	</body>
+
+</html>
